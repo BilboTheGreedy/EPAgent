@@ -1,0 +1,6 @@
+{
+    "APIKey": "secret123",
+    "certFile": "certificates/cert.pem",
+    "keyFile": "certificates/key.pem",
+    "agentPort": 8080
+}
