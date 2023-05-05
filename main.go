@@ -107,6 +107,7 @@ func sh(c *gin.Context) {
 }
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	cfg = LoadConfiguration("config.json")
 	r := gin.Default()
 	r.Use(checkAPIKey())
