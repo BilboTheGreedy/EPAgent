@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/exec"
 	"runtime"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -115,5 +116,5 @@ func main() {
 	r.POST("/sh", checkAPIKey(), func(c *gin.Context) {
 		sh(c)
 	})
-	r.RunTLS(":8080", cfg.CertFile, cfg.KeyFile)
+	r.RunTLS(":"+strconv.Itoa(cfg.AgentPort), cfg.CertFile, cfg.KeyFile)
 }
